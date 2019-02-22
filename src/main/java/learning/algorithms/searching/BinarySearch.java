@@ -12,7 +12,7 @@ public class BinarySearch implements SearchingAlgorithm {
 	 * @return
 	 */
 	@Override
-	public <T> int doSearch(T[] array, Comparable<T> query) {
+	public <T> int search(T[] array, Comparable<T> query) {
 		System.out.println("Given " + Arrays.toString(array));
 		int p = 0;
 		int r = array.length - 1;

@@ -13,7 +13,7 @@ public class LinearSearch implements SearchingAlgorithm {
 	 * @return
 	 */
 	@Override
-	public <T> int doSearch(T[] array, Comparable<T> query) {
+	public <T> int search(T[] array, Comparable<T> query) {
 		System.out.println("Given " + Arrays.toString(array));
 		for (int i = 0; i < array.length; i++) {
 			System.out.println("-> comparing element[" + i + "] = " + array[i]);

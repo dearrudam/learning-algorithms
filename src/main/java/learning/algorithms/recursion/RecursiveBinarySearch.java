@@ -6,7 +6,7 @@ import learning.algorithms.searching.SearchingAlgorithm;
 
 public class RecursiveBinarySearch implements SearchingAlgorithm {
 
-	public <T> int doSearch(T[] array, Comparable<T> comparable) {
+	public <T> int search(T[] array, Comparable<T> comparable) {
 		System.out.println("Given " + Arrays.toString(array));
 		return recursiveBinarySearch(array, 0, array.length - 1, comparable);
 	}
