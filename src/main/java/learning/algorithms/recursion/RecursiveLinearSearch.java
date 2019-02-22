@@ -15,14 +15,15 @@ public class RecursiveLinearSearch implements SearchingAlgorithm {
 		if (i > array.length - 1) {
 			System.out.println("-> not found");
 			return -1;
-		} else {
-			System.out.println("-> comparing element[" + i + "] = " + array[i]);
-			if (comparable.compareTo(array[i]) == 0) {
-				System.out.println("-> found in index " + i);
-				return i;
-			} else {
-				return recursiveLinearSearch(array, i + 1, comparable);
-			}
 		}
+
+		System.out.println("-> comparing element[" + i + "] = " + array[i]);
+		if (comparable.compareTo(array[i]) == 0) {
+			System.out.println("-> found in index " + i);
+			return i;
+		} else {
+			return recursiveLinearSearch(array, i + 1, comparable);
+		}
+
 	}
 }
