@@ -36,6 +36,7 @@ public abstract class SearchingAlgorithmTest {
 				assertEquals(expected,
 						searchingAlgorithm.doSearch(sortedArray, (item) -> Integer.compare(expectedValue,item)));
 			}
+			System.out.println("Searching for an index in the array where element's value equals to " + Integer.MAX_VALUE + "");
 			assertEquals(-1,
 					searchingAlgorithm.doSearch(sortedArray, (item) -> Integer.compare(item, Integer.MAX_VALUE)));
 		} finally {

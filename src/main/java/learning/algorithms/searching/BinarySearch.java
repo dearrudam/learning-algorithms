@@ -21,7 +21,7 @@ public class BinarySearch implements SearchingAlgorithm {
 			System.out.print("-> comparing element[" + q + "] = " + array[q]);
 			int comparison = query.compareTo(array[q]);
 			if (comparison == 0) {
-				System.out.println("-> found in " + q + " index");
+				System.out.println("-> found in index " + q );
 				return q;
 			} else if (comparison < 0) {
 				System.out.println("-> it's greater than the target value");
@@ -31,6 +31,7 @@ public class BinarySearch implements SearchingAlgorithm {
 				p = q + 1;
 			}
 		}
+		System.out.println("-> not found");
 		return -1;
 	}
 }
