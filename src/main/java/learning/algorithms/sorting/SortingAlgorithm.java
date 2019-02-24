@@ -13,6 +13,6 @@ import java.util.Comparator;
  */
 public interface SortingAlgorithm {
 
-    public <T>T[] sort(T[] items,Comparator<T> comparator);
+    public <T>void sort(T[] items,Comparator<T> comparator);
 
 }

@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -25,19 +26,22 @@ public abstract class SortingAlgorithmTest {
 
 	protected abstract SortingAlgorithm sortingAlgorithm();
 
-	
+	protected Integer[] unsortedArray;
+	protected Integer[] sortedArray;
+	protected Integer[] inverseSortedArray;
 
-	static final int size=10;
-	static final Integer[] unsortedArray=new Integer[size];
-	static final Integer[] sortedArray;
-	static final Integer[] inverseSortedArray;
+	protected int arraySize() {
+		return 10;
+	}
 
-	static {
+	@Before
+	public void before() {
+		unsortedArray = new Integer[arraySize()];
 		fillRandomData(unsortedArray);
-		sortedArray=Arrays.copyOf(unsortedArray, unsortedArray.length);
+		sortedArray = Arrays.copyOf(unsortedArray, unsortedArray.length);
 		Arrays.sort(sortedArray);
-		inverseSortedArray=Arrays.copyOf(sortedArray, sortedArray.length);
-		Arrays.sort(inverseSortedArray,Collections.reverseOrder());
+		inverseSortedArray = Arrays.copyOf(sortedArray, sortedArray.length);
+		Arrays.sort(inverseSortedArray, Collections.reverseOrder());
 	}
 
 	@Test
@@ -48,7 +52,9 @@ public abstract class SortingAlgorithmTest {
 
 			Integer[] expected = Arrays.copyOf(sortedArray, sortedArray.length);
 
-			Integer[] actual = sortingAlgorithm().sort(Arrays.copyOf(input, input.length), Integer::compareTo);
+			Integer[] actual = Arrays.copyOf(input, input.length);
+
+			sortingAlgorithm().sort(actual, Integer::compareTo);
 
 			Assert.assertArrayEquals(String.format("givan a array: %s, expected: %s, but returns: %s",
 					Arrays.toString(input),
@@ -67,7 +73,9 @@ public abstract class SortingAlgorithmTest {
 
 			Integer[] expected = Arrays.copyOf(inverseSortedArray, inverseSortedArray.length);
 
-			Integer[] actual = sortingAlgorithm().sort(Arrays.copyOf(input, input.length), inverseComparator());
+			Integer[] actual = Arrays.copyOf(input, input.length);
+
+			sortingAlgorithm().sort(actual, inverseComparator());
 
 			Assert.assertArrayEquals(String.format("givan a array: %s, expected: %s, but returns: %s",
 					Arrays.toString(input),
@@ -87,7 +95,9 @@ public abstract class SortingAlgorithmTest {
 
 			Integer[] expected = Arrays.copyOf(sortedArray, sortedArray.length);
 
-			Integer[] actual = sortingAlgorithm().sort(Arrays.copyOf(input, input.length), Integer::compareTo);
+			Integer[] actual = Arrays.copyOf(input, input.length);
+
+			sortingAlgorithm().sort(actual, Integer::compareTo);
 
 			Assert.assertArrayEquals(String.format("givan a array: %s, expected: %s, but returns: %s",
 					Arrays.toString(input),
@@ -103,12 +113,13 @@ public abstract class SortingAlgorithmTest {
 		try {
 			System.out.println("---Begin " + getClass().getSimpleName() + ".test4_sortAnSortedArrayDesc()");
 
-
 			Integer[] input = Arrays.copyOf(inverseSortedArray, inverseSortedArray.length);
 
 			Integer[] expected = Arrays.copyOf(inverseSortedArray, inverseSortedArray.length);
 
-			Integer[] actual = sortingAlgorithm().sort(Arrays.copyOf(input, input.length), inverseComparator());
+			Integer[] actual = Arrays.copyOf(input, input.length);
+
+			sortingAlgorithm().sort(actual, inverseComparator());
 
 			Assert.assertArrayEquals(String.format("givan a array: %s, expected: %s, but returns: %s",
 					Arrays.toString(input),

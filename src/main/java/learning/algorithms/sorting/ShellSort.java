@@ -13,7 +13,7 @@ import java.util.Comparator;
 public class ShellSort implements SortingAlgorithm {
 
 	@Override
-	public <T> T[] sort(T[] items, Comparator<T> comparator) {
+	public <T> void sort(T[] items, Comparator<T> comparator) {
 		System.out.println("Given " + Arrays.toString(items));
 		// Start with the largest gap and work down to a gap of 1
 		for (int gap = ((items.length - 1) / 2); gap > 0; gap /= 2) {
@@ -61,7 +61,6 @@ public class ShellSort implements SortingAlgorithm {
 			}
 		}
 
-		return items;
 	}
 
 	private <T> T[] sortedarea(T[] items, int lastSortedIndex) {

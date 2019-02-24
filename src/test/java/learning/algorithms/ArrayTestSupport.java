@@ -6,10 +6,7 @@ import java.util.Random;
 public class ArrayTestSupport {
 	public static Comparator<Integer> inverseComparator() {
 		return (item1, item2) -> {
-			int r = Integer.compare((Integer) item1, (Integer) item2);
-			if (r == 0)
-				return 0;
-			return r > 0 ? -1 : 1;
+			return Integer.compare((Integer) item2, (Integer) item1);
 		};
 	}
 

@@ -15,7 +15,7 @@ import java.util.Comparator;
 public class InsertionSort implements SortingAlgorithm {
 
 	@Override
-	public <T> T[] sort(T[] items, Comparator<T> comparator) {
+	public <T> void sort(T[] items, Comparator<T> comparator) {
 		System.out.println("Given " + Arrays.toString(items));
 
 		// assume that elements from index 1 to the end of the array (the unsorted partition) 
@@ -58,8 +58,6 @@ public class InsertionSort implements SortingAlgorithm {
 			}
 
 		}
-
-		return items;
 
 	}
 

@@ -18,7 +18,7 @@ import java.util.Comparator;
 public class BubbleSort implements SortingAlgorithm {
 
 	@Override
-	public <T> T[] sort(T[] items, Comparator<T> comparator) {
+	public <T> void sort(T[] items, Comparator<T> comparator) {
 		System.out.println("Given " + Arrays.toString(items));
 		// iterate on the unsorted area of the array, starting from the last slot to the first one
 		for (int lastUnsortedSlot = items.length - 1; lastUnsortedSlot > 0; lastUnsortedSlot--) {
@@ -57,8 +57,6 @@ public class BubbleSort implements SortingAlgorithm {
 				break;
 			}
 		}
-
-		return items;
 	}
 
 }
