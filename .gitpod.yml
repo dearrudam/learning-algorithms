@@ -5,13 +5,12 @@ image:
 # ports:
 #   - port: 3000
 #     onOpen: open-preview
-
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 # tasks:
 # - init: echo 'init script' # runs during prebuild
 #   command: echo 'start script'
-
 vscode:
   extensions:
     - redhat.java@0.57.0:IhAHbFLCVH6Nr8sy6OkPxg==
     - vscjava.vscode-java-debug@0.25.0:kzrHloDvSyL81jltUd00Eg==
+    - vscjava.vscode-java-test@0.22.2:ZBznuSuKUJo5X8dZe6b9Nw==
