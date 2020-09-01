@@ -5,9 +5,6 @@
  */
 package learning.algorithms.sorting;
 
-import learning.algorithms.sorting.InsertionSort;
-import learning.algorithms.sorting.SortingAlgorithm;
-
 /**
  *
  * @author dearrudam

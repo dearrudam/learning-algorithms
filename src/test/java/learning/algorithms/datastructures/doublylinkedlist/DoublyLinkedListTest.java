@@ -4,8 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import learning.algorithms.datastructures.doublylinkedlist.DoublyLinkedList;
-
 public class DoublyLinkedListTest extends DoublyLinkedList {
 
 	@Test

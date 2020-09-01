@@ -2,7 +2,7 @@ package learning.algorithms.datastructures.binarysearchtree;
 
 public class BinarySearchTree<T> {
 
-	private Node root;
+	private Node<T> root;
 
 	public void insert(int key, T value) {
 		Node<T> newNode = new Node<T>(key, value);

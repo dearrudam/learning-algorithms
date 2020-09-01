@@ -9,8 +9,6 @@ import java.io.StringWriter;
 
 import org.junit.Test;
 
-import learning.algorithms.datastructures.singlylinkedlist.SinglyLinkedList;
-
 public class SinglyLinkedListTest {
 
 	@Test
